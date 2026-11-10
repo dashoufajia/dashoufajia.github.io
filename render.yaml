@@ -1,0 +1,39 @@
+# Draft configuration: confirm workspace, service name, region and plan before creation.
+services:
+  - type: web
+    name: writing-lab-api
+    runtime: python
+    branch: main
+    plan: free
+    region: singapore
+    buildCommand: python -m pip install -r starter/requirements.txt && python -m spacy download en_core_web_sm && python -m nltk.downloader -d nltk_data cmudict && python scripts/check_runtime.py
+    startCommand: python -m uvicorn starter.app:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /healthz
+    numInstances: 1
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.14
+      - key: APP_ENV
+        value: production
+      - key: NLTK_DATA
+        value: ./nltk_data
+      - key: ALLOWED_ORIGINS
+        value: https://dashoufajia.github.io
+      - key: ANTROUTER_BASE_URL
+        value: https://api.antrouter.io/v1
+      - key: ANTROUTER_MODEL
+        value: gpt-6.1-sol
+      - key: ANTROUTER_API_KEY
+        sync: false
+      - key: CLASSROOM_DEMO_CODE
+        sync: false
+      - key: AI_REQUESTS_PER_MINUTE
+        value: '5'
+      - key: AI_TOTAL_PER_MINUTE
+        value: '30'
+      - key: AI_TOTAL_PER_DAY
+        value: '200'
+      - key: ANALYSIS_REQUESTS_PER_MINUTE
+        value: '15'
+      - key: ANALYSIS_TOTAL_PER_MINUTE
+        value: '120'

@@ -1,0 +1,75 @@
+{
+  "version": "1.0",
+  "scope": "Teacher-authored fictional English materials. No real student data. Prototype learners: upper-primary English learners. University students are the designers.",
+  "samples": [
+    {
+      "id": "W1",
+      "label": "Clear explanation",
+      "audience": "First-year university students",
+      "purpose": "Explain a proposed peer writing service",
+      "text": "Our university is considering a peer writing service for first-year students. The service would offer short meetings with trained student volunteers. Writers would bring a draft and choose one question to discuss. For example, they might ask whether the introduction explains the purpose of the essay or whether a paragraph contains enough evidence. The volunteer would ask questions and suggest a next step. The writer would make the final decisions.\nThe service could help students who find it difficult to begin revising. A conversation can reveal a problem that a writer has overlooked. However, volunteers would need clear training. They should distinguish an unclear idea from a grammar error and avoid replacing the writer's voice with their own. They should also explain when a question requires advice from the course teacher.\nAn AI tool could support these meetings by showing sentence lengths and highlighting repeated words. It could also suggest possible grammar problems. These suggestions would need checking because a correct expression may look unusual outside its context. A long sentence may be effective, and a short sentence may still be confusing.\nThe university should begin with a small trial. Students could submit an initial draft, a revised draft and a brief explanation of their changes. A later writing task without assistance would provide additional evidence of learning. Attendance and satisfaction would be useful information, but they would not show by themselves whether students had become more capable writers.",
+      "review": [
+        "Clear audience and purpose",
+        "Do not penalise simple vocabulary automatically",
+        "Distinguish text improvement from independent learning"
+      ]
+    },
+    {
+      "id": "W2",
+      "label": "Learner draft with target difficulties",
+      "audience": "First-year university students",
+      "purpose": "Describe experience and recommend a writing service",
+      "text": "Last semester our class starts a writing group because many student felt nervous about academic essays. At the first meeting, I bring a paragraph about online learning. My partner read it and ask me several useful questions. She wanted to know who would use the system and why the proposal mattered. I was surprised because I expected her to correct every word for me.\nI have joined the group since three months. During that time, the meetings has helped me notice problems in my arguments. Yesterday I have finished a new essay about university transport. I wanted to borrow my classmate a dictionary, but she said she already had one. Later I realised that I had chosen the wrong word. We discussed the difference and wrote two examples together.\nWhen I was checking the final paragraph, my phone ring. I answered it and forgot to save the document. The next morning, I spend twenty minutes trying to recover my work. This experience taught me that a useful writing website should keep a draft safely and explain what it stores.\nAn automatic tool can offers suggestions quickly, but students should decide whether each suggestion fits their meaning. Some feedback are too general to help a beginner. I would prefer a short explanation with an example from my own text. The group could also use a small game to practise difficult forms. After the game, students should write a new paragraph to see whether they can use those forms independently.",
+      "review": [
+        "starts -> started",
+        "many student -> many students",
+        "bring -> brought; ask -> asked (read is already a valid past form)",
+        "since three months: duration and aspect need revision",
+        "meetings has -> meetings have",
+        "Yesterday I have finished -> Yesterday I finished",
+        "borrow my classmate -> lend my classmate",
+        "phone ring -> phone rang",
+        "spend -> spent",
+        "can offers -> can offer",
+        "feedback are -> feedback is"
+      ],
+      "note": "Teaching annotations are examples, not an exhaustive gold standard. Keep original before editing."
+    },
+    {
+      "id": "W3",
+      "label": "Dense institutional wording",
+      "audience": "First-year university students",
+      "purpose": "Explain the same proposed support service",
+      "text": "The proposed implementation of a university-wide peer-facilitated writing consultation mechanism is intended to enhance the accessibility of formative developmental support for undergraduate participants during the initial phase of their academic transition. The operationalisation of this mechanism would involve the recruitment, preparation and subsequent coordination of student volunteers whose responsibilities would encompass the facilitation of reflective discussion concerning participant-selected aspects of developing written assignments.\nThe anticipated educational contribution of the proposed provision concerns the identification of opportunities for revision through collaborative examination of textual organisation, evidential sufficiency and audience orientation. Nevertheless, the successful realisation of these objectives would depend upon the establishment of explicit procedural boundaries. Volunteer involvement should facilitate authorial decision-making rather than result in the unacknowledged substitution of volunteer-generated formulations for participant-produced language.\nThe potential incorporation of automated linguistic analysis could provide supplementary descriptive information concerning sentence length distributions, recurrent lexical selections and possible grammatical difficulties. The interpretation of such information would require sensitivity to disciplinary expectations, communicative purposes and the limitations of automated classification. Uncritical optimisation of individual numerical indicators could encourage revisions that increase superficial complexity while reducing accessibility for the intended readership.\nAn initial evaluation should therefore incorporate evidence extending beyond service utilisation and participant satisfaction. Comparisons between successive drafts could document the nature of revision, while subsequent unaided performance on a different writing task could provide additional evidence concerning the transfer of learning. The collection of these complementary forms of evidence would support a more defensible assessment of the educational value of the proposed intervention.",
+      "review": [
+        "Mostly grammatical but demanding for intended audience",
+        "Suggest clearer wording without changing claims",
+        "Long words and nominalisation do not establish better quality"
+      ]
+    }
+  ],
+  "calculation_fixture": {
+    "text": "Cats sleep. Cats play.",
+    "words": 4,
+    "sentences": 2,
+    "types": 3,
+    "TTR": 0.75,
+    "MATTR_50": null,
+    "mean_sentence_length": 2
+  },
+  "manual_syntax_fixture": {
+    "text": "I stayed home because it rained.",
+    "sentences": 1,
+    "finite_clauses": 2,
+    "dependent_finite_clauses": 1,
+    "clauses_per_sentence": 2,
+    "dependent_clauses_per_clause": 0.5
+  },
+  "synthetic_readability_fixture": {
+    "words": 120,
+    "sentences": 8,
+    "syllables": 180,
+    "FRE": 64.71,
+    "note": "Counts are hypothetical and do not refer to the supplied sample essays."
+  }
+}
